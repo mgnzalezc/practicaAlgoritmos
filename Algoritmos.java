@@ -2,10 +2,10 @@ package Entornos;
 
 public abstract class Algoritmos {
 
-	public int fibonacci(int n) {
+	public static int fibonacci(int n) {
 
 		if(n<0) {
-			///throw
+			throw new IllegalArgumentException("Numero menor a 0"); 
 		}
 
 		int f0 = 0;
@@ -22,9 +22,9 @@ public abstract class Algoritmos {
 	}
 
 
-	public int factorial(int n) {
+	public static int factorial(int n) {
 		if(n<0) {
-			///throw
+			throw new IllegalArgumentException("Numero menor a 0"); 
 		}
 
 		int ans = 1;
@@ -35,9 +35,9 @@ public abstract class Algoritmos {
 	}
 
 
-	public boolean primo(int n) {
+	public static boolean primo(int n) {
 		if (n<2){
-			
+			throw new IllegalArgumentException("Numero menor a 2"); 
 		}
 		for (int i = 2; i < n; i++) {
 			if (n % i == 0) {
